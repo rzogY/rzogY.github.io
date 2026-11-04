@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Choose Your Skin with RIZLL — سكنات ليون للعبة Resident Evil 4 بمجسّمات ثلاثية الأبعاد. شوف السكنات واطلب سكنك الخاص من RIZLL.">
+<meta name="keywords" content="RIZLL, Choose Your Skin, Choose Your Skin with RIZLL, Resident Evil 4, Leon skin, سكنات ليون, مودات ريزدنت ايفل 4">
+<meta property="og:title" content="Choose Your Skin with RIZLL">
+<meta property="og:description" content="سكنات ليون للعبة Resident Evil 4 بمجسّمات ثلاثية الأبعاد، واطلب سكنك الخاص.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index,follow">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Choose Your Skin with RIZLL","alternateName":["RIZLL","Choose Your Skin"]}</script>
+</head>
+<body>
+<title>Choose Your Skin with RIZLL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Noto+Kufi+Arabic:wght@500;700;800&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+/* Layout: a dark specimen cabinet — full-bleed 3D stage up top, skin drawer below, request ledger last. Single dark look by choice. */
+:root{
+  --ink:#0d0b0a; --panel:#17130f; --line:#2c241c; --bone:#d9cdb4; --bone-dim:#9c907a;
+  --blood:#9e2b25; --blood-hi:#c9433a; --amber:#c79a4a;
+  --f-display:"IM Fell English SC", "Times New Roman", serif;
+  --f-ar-display:"Noto Kufi Arabic", "Tajawal", Tahoma, sans-serif;
+  --f-body:"Tajawal", "Noto Kufi Arabic", Tahoma, "Segoe UI", sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--ink);color:var(--bone)}
+body{font-family:var(--f-body);font-size:16px;line-height:1.8;font-weight:400;direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
+.brand{font-family:var(--f-display);font-size:28px;letter-spacing:.12em;color:var(--bone);direction:ltr}
+.brand b{color:var(--blood-hi);font-weight:400}
+.brand small{font-size:13px;letter-spacing:.08em;color:var(--bone-dim);margin-inline-start:6px}
+@media (max-width:560px){.brand{font-size:20px}.brand small{display:none}}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(13,11,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-bottom:18px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+nav{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav a{display:inline-flex;align-items:center;gap:7px;color:var(--bone-dim);text-decoration:none;font-size:14px;padding:8px 12px;border-radius:3px;border:1px solid transparent}
+nav a svg{width:16px;height:16px;flex:none}
+nav a:hover,nav a:focus-visible{color:var(--bone);border-color:var(--line)}
+nav a.cta{background:var(--blood);color:var(--bone);border-color:var(--blood-hi)}
+nav a.cta:hover{background:var(--blood-hi)}
+.en{direction:ltr;unicode-bidi:isolate;font-family:var(--f-display);letter-spacing:.05em}
+@media (max-width:560px){nav a .lbl{display:none}nav a{padding:8px 10px}}
+/* stage */
+.stage{position:relative;border:1px solid var(--line);background:
+  radial-gradient(60% 70% at 50% 35%,#2a1712 0%,#120e0b 55%,#0b0908 100%);overflow:hidden;border-radius:4px}
+#view{display:block;width:100%;height:min(78vh,720px);min-height:460px;cursor:grab;touch-action:none}
+#view:active{cursor:grabbing}
+.fog{position:absolute;inset:auto 0 0 0;height:40%;pointer-events:none;background:linear-gradient(to top,rgba(13,11,10,.95),transparent)}
+.hud{position:absolute;inset:auto 0 0 0;padding:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;pointer-events:none}
+.hud>*{pointer-events:auto}
+.eyebrow{font-size:13px;color:var(--amber);text-transform:uppercase}
+.skin-name{font-family:var(--f-ar-display);font-weight:800;font-size:clamp(30px,5vw,54px);line-height:1.3;margin:4px 0 6px;text-wrap:balance}
+.skin-by{color:var(--bone-dim);font-size:14px}
+.skin-by strong{color:var(--blood-hi);font-family:var(--f-display);letter-spacing:.08em;font-weight:400}
+.ctrls{display:flex;gap:8px;flex-wrap:wrap}
+.btn{font:inherit;font-size:14px;border:1px solid var(--line);background:rgba(23,19,15,.85);color:var(--bone);padding:9px 16px;border-radius:3px;cursor:pointer}
+.btn:hover{border-color:var(--bone-dim)}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.btn.primary{background:var(--blood);border-color:var(--blood-hi)}
+.btn.primary:hover{background:var(--blood-hi)}
+.btn[aria-pressed="true"]{border-color:var(--amber);color:var(--amber)}
+.loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--bone-dim);font-size:14px;pointer-events:none}
+.hint{position:absolute;top:16px;inset-inline-start:18px;font-size:12px;color:var(--bone-dim)}
+.typewriter{position:absolute;top:14px;inset-inline-end:18px;font-family:var(--f-display);font-size:13px;letter-spacing:.14em;color:var(--blood-hi);direction:ltr}
+/* sections */
+section{padding-block:56px 0}
+h2{font-family:var(--f-ar-display);font-weight:700;font-size:30px;line-height:1.4;margin:0 0 6px;text-wrap:balance}
+.lede{color:var(--bone-dim);max-width:62ch;margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;gap:10px;background:var(--panel);border:1px solid var(--line);padding:18px;border-radius:4px;text-align:start;color:inherit;font:inherit;cursor:pointer}
+.card:hover{border-color:var(--bone-dim)}
+.card[aria-current="true"]{border-color:var(--blood-hi);box-shadow:0 0 0 1px var(--blood-hi) inset}
+.card .tag{align-self:flex-start;font-size:12px;padding:2px 8px;border:1px solid var(--line);color:var(--amber)}
+.card h3{font-family:var(--f-ar-display);font-size:22px;margin:0}
+.card p{margin:0;color:var(--bone-dim);font-size:14px}
+.card .meta{display:flex;flex-wrap:wrap;gap:6px}
+.card .meta span{font-size:12px;color:var(--bone);background:#221c16;padding:2px 8px;border-radius:2px}
+.card.soon{cursor:default;border-style:dashed;justify-content:center;align-items:flex-start}
+/* form */
+.req{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+@media (max-width:820px){.req{grid-template-columns:1fr}}
+form{display:grid;gap:14px;background:var(--panel);border:1px solid var(--line);padding:22px;border-radius:4px;min-width:0}
+label{display:grid;gap:6px;font-size:14px;color:var(--bone)}
+input,textarea,select{font:inherit;background:#0f0c0a;color:var(--bone);border:1px solid var(--line);border-radius:3px;padding:10px 12px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+.note{font-size:13px;color:var(--bone-dim)}
+.status{font-size:14px;min-height:1.6em}
+.status.ok{color:var(--amber)} .status.err{color:var(--blood-hi)}
+.steps{display:grid;gap:14px;align-content:start;min-width:0}
+.step{border-inline-start:2px solid var(--blood);padding-inline-start:14px}
+.step b{font-family:var(--f-ar-display);font-weight:500;color:var(--bone)}
+.step p{margin:2px 0 0;color:var(--bone-dim);font-size:14px}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:0 0 26px}
+.price{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:18px;display:grid;gap:8px;text-align:start;color:inherit;font:inherit;cursor:pointer}
+.price:hover{border-color:var(--bone-dim)}
+.price[aria-pressed="true"]{border-color:var(--blood-hi);box-shadow:0 0 0 1px var(--blood-hi) inset}
+.price h3{font-family:var(--f-ar-display);font-size:20px;margin:0}
+.price .amt{font-family:var(--f-ar-display);font-size:34px;color:var(--amber);line-height:1}
+.price .amt small{font-size:15px;color:var(--bone-dim);margin-inline-start:6px}
+.price p{margin:0;color:var(--bone-dim);font-size:14px}
+.copybox{white-space:pre-wrap;background:#0f0c0a;border:1px solid var(--line);padding:12px;font-size:13px;border-radius:3px;max-height:220px;overflow:auto}
+/* owner */
+.ledger{display:grid;gap:10px}
+.entry{background:var(--panel);border:1px solid var(--line);padding:14px 16px;border-radius:4px;display:grid;gap:6px}
+.entry .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.pill{font-size:12px;padding:2px 10px;border-radius:20px;border:1px solid}
+.pill.new{color:var(--blood-hi);border-color:var(--blood-hi)}
+.pill.work{color:var(--amber);border-color:var(--amber)}
+.pill.done{color:#8fb58a;border-color:#8fb58a}
+footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--line);color:var(--bone-dim);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<div class="wrap">
+<h1 hidden>Choose Your Skin with RIZLL</h1>
+  <header class="top">
+    <div class="brand">CHOOSE <b>YOUR</b> SKIN <small>with RIZLL</small></div>
+    <nav aria-label="القائمة">
+      <a href="#stage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg><span class="lbl">العرض</span></a>
+      <a href="#skins"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span class="lbl">السكنات</span></a>
+      <a href="#request" class="cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg><span class="lbl">اطلب سكنك</span></a>
+    </nav>
+  </header>
+
+  <div class="stage" id="stage">
+    <canvas id="view" aria-label="مجسم ليون ثلاثي الأبعاد، اسحب لتدويره"></canvas>
+    <div class="loading" id="loading">جاري تحميل المجسّم…</div>
+    <div class="hint">اسحب لتدوير المجسّم، واستخدم العجلة أو إصبعين للتقريب</div>
+    <div class="typewriter">RESIDENT EVIL 4</div>
+    <div class="fog"></div>
+    <div class="hud">
+      <div>
+        <div class="eyebrow" id="skinTag">الأصلي · ٢٠٠٥</div>
+        <div class="skin-name" id="skinName">ليون الكلاسيك</div>
+        <div class="skin-by" id="skinBy">الشكل الأصلي من اللعبة</div>
+      </div>
+      <div class="ctrls">
+        <button class="btn" id="spinBtn" aria-pressed="true">دوران تلقائي</button>
+        <button class="btn" data-cam="face">الوجه</button>
+        <button class="btn" data-cam="body">الجسم كامل</button>
+        <button class="btn" id="cmpBtn" aria-pressed="false" hidden>قارن مع الأصلي</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="skins">
+    <h2>السكنات</h2>
+    <p class="lede">ابدأ بليون الكلاسيك كما ظهر في اللعبة، وبعدها شوف السكنات اللي صنعها <bdi class="en">RIZLL</bdi>. اضغط على أي سكن، ويتغيّر المجسّم في الأعلى.</p>
+    <div class="grid" id="skinGrid"></div>
+  </section>
+
+  <section id="request">
+    <h2>اطلب سكنك</h2>
+    <p class="lede">تبي ليون بشكل معيّن؟ اكتب فكرتك بالتفصيل، و<bdi class="en">RIZLL</bdi> يصمّمها لك ويرسل لك الملف جاهز.</p>
+    <div class="prices" id="prices">
+      <button type="button" class="price" data-type="model" aria-pressed="true"><h3>تصميم كامل للسكن</h3><div class="amt">١٥<small>ريال</small></div><p>تعديل المجسّم نفسه: قطع جديدة مثل الأقنعة والإكسسوارات، وتغيير الشكل والملابس، مع الألوان.</p></button>
+      <button type="button" class="price" data-type="texture" aria-pressed="false"><h3>تصميم الألوان فقط</h3><div class="amt">١٠<small>ريال</small></div><p>تغيير ألوان ورسومات الملابس والبشرة والشعر، بدون تعديل على شكل المجسّم.</p></button>
+    </div>
+    <div class="req">
+      <form id="reqForm" novalidate>
+        <label for="fType">نوع الطلب
+          <select id="fType" name="type">
+            <option value="model">تصميم كامل للسكن · ١٥ ريال</option>
+            <option value="texture">تصميم الألوان فقط · ١٠ ريال</option>
+          </select>
+        </label>
+        <div class="row">
+          <label for="fName">اسمك<input id="fName" name="name" required maxlength="60" placeholder="مثلاً: أبو خلود"></label>
+          <label for="fContact">وين نتواصل معك<input id="fContact" name="contact" required maxlength="120" placeholder="ديسكورد، انستقرام، أو إيميل"></label>
+        </div>
+        <label for="fBase">السكن الأساس
+          <select id="fBase" name="base">
+            <option value="classic">ليون الكلاسيك</option>
+            <option value="halloween">هالوين من RIZLL</option>
+            <option value="new">فكرة جديدة من الصفر</option>
+          </select>
+        </label>
+        <label for="fIdea">وش تبي بالضبط<textarea id="fIdea" name="idea" required maxlength="2000" placeholder="مثال: تيشيرت أحمر غامق، قناع أسود، الشعر مرجوع لورا، وجرح فوق العين اليمين"></textarea></label>
+        <label for="fRef">رابط صورة مرجعية (اختياري)<input id="fRef" name="ref" type="url" maxlength="400" placeholder="https://"></label>
+        <button class="btn primary" type="submit" id="sendBtn">أرسل الطلب</button>
+        <div class="status" id="status" role="status"></div>
+        <div id="copyWrap" hidden>
+          <p class="note">انسخ طلبك وأرسله إلى <bdi class="en">RIZLL</bdi> مباشرة:</p>
+          <div class="copybox" id="copyText"></div>
+          <button class="btn" type="button" id="copyBtn">انسخ الطلب</button>
+        </div>
+      </form>
+      <div class="steps">
+        <div class="step"><b>ترسل فكرتك</b><p>كل ما وصفت أكثر، كان السكن أقرب للي في بالك: الألوان، الملابس، الوجه، الشعر.</p></div>
+        <div class="step"><b>نشتغل على سكنك</b><p>يتعدّل المجسّم في بلندر ويتجرّب داخل اللعبة لين يطلع مضبوط.</p></div>
+        <div class="step"><b>تستلم الملف</b><p>يوصلك ملف مضغوط فيه السكن جاهز للتركيب في <bdi class="en">Resident Evil 4</bdi>.</p></div>
+        <div id="mine" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ownerPanel" hidden>
+    <h2>الطلبات</h2>
+    <p class="lede">تظهر لك هنا لأنك صاحب الصفحة. غيّر حالة كل طلب، ويشوفها صاحب الطلب عنده.</p>
+    <div class="ledger" id="ledger"></div>
+  </section>
+
+  <footer><span><bdi class="en">Choose Your Skin with RIZLL</bdi> · سكنات ليون للعبة <bdi class="en">Resident Evil 4</bdi></span><span>المجسّمات معروضة بإضاءة المتصفح وقد تختلف قليلاً عن اللعبة</span></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const SKINS=[
+  {id:"classic",file:"models/leon_orig.glb",tag:"الأصلي · ٢٠٠٥",name:"ليون الكلاسيك",by:"الشكل الأصلي من اللعبة",desc:"الجاكيت البني والقميص الأسود، كما ظهر ليون أول مرة في القرية.",meta:["الأصلي","بدون تعديل"],mine:false},
+  {id:"halloween",file:"models/leon_mod.glb",tag:"إصدار هالوين",name:"هالوين من RIZLL",by:'تم إنشاؤه بواسطة <strong class="en">RIZLL</strong>',desc:"قناع جمجمة، وأذنا أرنب سوداوان، وتيشيرت وبنطلون بهيكل عظمي، وذراع عظمية مجسّمة.",meta:["قناع جمجمة","ذراع عظمية","تسريحة المافيا"],mine:true}
+];
+const $=s=>document.querySelector(s);
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- 3D ---------- */
+const canvas=$("#view");
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.outputEncoding=THREE.sRGBEncoding;
+renderer.setClearColor(0x0d0b0a,1);
+const scene=new THREE.Scene();
+scene.fog=new THREE.Fog(0x0d0b0a,40,90);
+const cam=new THREE.PerspectiveCamera(32,1,0.1,200);
+const controls=new THREE.OrbitControls(cam,canvas);
+controls.enableDamping=true;controls.enablePan=false;controls.minDistance=6;controls.maxDistance=60;
+controls.autoRotate=!reduce;controls.autoRotateSpeed=1.4;
+scene.add(new THREE.HemisphereLight(0xe8d9c0,0x1a0f0a,0.9));
+const key=new THREE.DirectionalLight(0xfff0dc,1.1);key.position.set(8,20,18);scene.add(key);
+const rim=new THREE.DirectionalLight(0xc9433a,1.3);rim.position.set(-14,12,-16);scene.add(rim);
+const floor=new THREE.Mesh(new THREE.CircleGeometry(9,64),new THREE.MeshBasicMaterial({color:0x1a120d}));
+floor.rotation.x=-Math.PI/2;scene.add(floor);
+const ring=new THREE.Mesh(new THREE.RingGeometry(8.6,9,64),new THREE.MeshBasicMaterial({color:0x5a1a16,side:THREE.DoubleSide}));
+ring.rotation.x=-Math.PI/2;ring.position.y=0.01;scene.add(ring);
+
+const loader=new THREE.GLTFLoader();
+const cache={};let current=null,compareObj=null,activeId=null;
+function prep(root){
+  root.traverse(o=>{if(o.isMesh){const m=o.material;m.side=THREE.DoubleSide;if(m.map){m.map.encoding=THREE.sRGBEncoding;}
+    if(m.alphaTest>0||m.transparent){m.alphaTest=0.4;m.transparent=false;} m.roughness=0.85;m.metalness=0;}});
+  const box=new THREE.Box3().setFromObject(root);const c=box.getCenter(new THREE.Vector3());
+  root.position.x-=c.x;root.position.z-=c.z;root.position.y-=box.min.y;
+  const g=new THREE.Group();g.add(root);return g;
+}
+function load(id){
+  if(cache[id])return Promise.resolve(cache[id]);
+  const s=SKINS.find(k=>k.id===id);
+  return new Promise((res,rej)=>loader.load(s.file,g=>{cache[id]=prep(g.scene);res(cache[id]);},undefined,rej));
+}
+const views={body:{pos:[0,10,34],tgt:[0,9,0]},face:{pos:[0,17,9],tgt:[0,16.6,0]}};
+let tween=null;
+function goCam(name){const v=views[name];tween={t:0,fp:cam.position.clone(),ft:controls.target.clone(),tp:new THREE.Vector3(...v.pos),tt:new THREE.Vector3(...v.tgt)};if(reduce){tween.t=1;}}
+cam.position.set(0,10,34);controls.target.set(0,9,0);
+
+async function show(id){
+  activeId=id;const s=SKINS.find(k=>k.id===id);
+  $("#skinTag").textContent=s.tag;$("#skinName").textContent=s.name;$("#skinBy").innerHTML=s.by;
+  document.querySelectorAll(".card[data-id]").forEach(c=>c.setAttribute("aria-current",c.dataset.id===id?"true":"false"));
+  $("#cmpBtn").hidden=!s.mine;setCompare(false);
+  $("#loading").hidden=false;$("#loading").textContent="جاري تحميل المجسّم…";
+  try{
+    const obj=await load(id);if(activeId!==id)return;
+    if(current)scene.remove(current);current=obj;obj.position.x=0;scene.add(obj);
+    $("#loading").hidden=true;
+  }catch(e){$("#loading").textContent="ما قدرنا نحمّل المجسّم. حدّث الصفحة وجرب مرة ثانية.";}
+}
+async function setCompare(on){
+  $("#cmpBtn").setAttribute("aria-pressed",on?"true":"false");
+  if(compareObj){scene.remove(compareObj);compareObj=null;}
+  if(current){current.position.x=0;}
+  if(!on)return;
+  const base=await load("classic");
+  compareObj=base.clone();compareObj.position.set(-11,0,0);if(current)current.position.x=6;scene.add(compareObj);
+}
+$("#cmpBtn").onclick=()=>setCompare($("#cmpBtn").getAttribute("aria-pressed")!=="true");
+$("#spinBtn").onclick=e=>{controls.autoRotate=!controls.autoRotate;e.currentTarget.setAttribute("aria-pressed",String(controls.autoRotate));};
+document.querySelectorAll("[data-cam]").forEach(b=>b.onclick=()=>goCam(b.dataset.cam));
+
+function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+new ResizeObserver(resize).observe(canvas);resize();
+(function loop(){
+  requestAnimationFrame(loop);
+  if(tween){tween.t=Math.min(1,tween.t+0.035);const k=1-Math.pow(1-tween.t,3);cam.position.lerpVectors(tween.fp,tween.tp,k);controls.target.lerpVectors(tween.ft,tween.tt,k);if(tween.t>=1)tween=null;}
+  controls.update();renderer.render(scene,cam);
+})();
+
+/* ---------- gallery ---------- */
+const grid=$("#skinGrid");
+SKINS.forEach(s=>{
+  const b=document.createElement("button");b.className="card";b.dataset.id=s.id;b.type="button";
+  b.innerHTML=`<span class="tag">${s.mine?'من صنع <bdi class="en">RIZLL</bdi>':"الأصلي"}</span><h3></h3><p></p><div class="meta"></div>`;
+  b.querySelector("h3").textContent=s.name;b.querySelector("p").textContent=s.desc;
+  s.meta.forEach(m=>{const x=document.createElement("span");x.textContent=m;b.querySelector(".meta").append(x);});
+  b.onclick=()=>{show(s.id);$("#stage").scrollIntoView({behavior:reduce?"auto":"smooth"});};
+  grid.append(b);
+});
+const soon=document.createElement("div");soon.className="card soon";
+soon.innerHTML='<span class="tag">قريباً</span><h3>سكنك أنت</h3><p>الطلب اللي ترسله تحت ممكن يكون السكن الجاي هنا.</p>';
+grid.append(soon);
+show("classic");
+
+/* ---------- requests ---------- */
+const STATUS={new:["جديد","new"],work:["قيد الشغل","work"],done:["جاهز","done"]};
+let db=null,user=null,myId=null,owner=false;
+function reqText(d){return `طلب سكن ليون\nنوع الطلب: ${$("#fType").selectedOptions[0].textContent}\nالاسم: ${d.name}\nالتواصل: ${d.contact}\nالسكن الأساس: ${$("#fBase").selectedOptions[0].textContent}\nالفكرة: ${d.idea}${d.ref?"\nصورة مرجعية: "+d.ref:""}`;}
+$("#reqForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const d={type:$("#fType").value,name:$("#fName").value.trim(),contact:$("#fContact").value.trim(),base:$("#fBase").value,idea:$("#fIdea").value.trim(),ref:$("#fRef").value.trim()};
+  const st=$("#status");st.className="status";
+  if(!d.name||!d.contact||!d.idea){st.textContent="اكتب اسمك وطريقة التواصل والفكرة، وبعدها أرسل.";st.classList.add("err");return;}
+  $("#copyWrap").hidden=true;
+  if(db&&myId){
+    try{
+      $("#sendBtn").disabled=true;
+      await db.doc("requests/"+myId).set({...d,status:"new",at:Date.now()});
+      st.textContent="وصل طلبك. تقدر تتابع حالته هنا.";st.classList.add("ok");
+    }catch(err){fallback(d);} finally{$("#sendBtn").disabled=false;}
+  }else fallback(d);
+});
+function fallback(d){$("#copyText").textContent=reqText(d);$("#copyWrap").hidden=false;$("#status").textContent="";}
+$("#copyBtn").onclick=async()=>{
+  const t=$("#copyText").textContent;
+  try{await navigator.clipboard.writeText(t);$("#copyBtn").textContent="تم النسخ";}
+  catch(e){const r=document.createRange();r.selectNodeContents($("#copyText"));const s=getSelection();s.removeAllRanges();s.addRange(r);$("#copyBtn").textContent="حدّد النص وانسخه";}
+};
+function pickType(t){$("#fType").value=t;document.querySelectorAll(".price").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.type===t)));}
+document.querySelectorAll(".price").forEach(b=>b.onclick=()=>{pickType(b.dataset.type);$("#fName").focus();});
+$("#fType").onchange=e=>pickType(e.target.value);
+function pill(s){const[a,c]=STATUS[s]||STATUS.new;return `<span class="pill ${c}">${a}</span>`;}
+function renderMine(snap){
+  const m=$("#mine");if(!snap.exists){m.hidden=true;return;}
+  const d=snap.data();m.hidden=false;m.className="entry";
+  m.innerHTML=`<div class="top"><b>طلبك</b>${pill(d.status)}</div><p class="note"></p>`;m.querySelector("p").textContent=d.idea;
+}
+function renderLedger(qs){
+  const L=$("#ledger");L.innerHTML="";
+  if(qs.empty){L.innerHTML='<p class="note">ما فيه طلبات للحين. أول ما يرسل أحد طلب يطلع هنا.</p>';return;}
+  qs.docs.slice().sort((a,b)=>(b.data().at||0)-(a.data().at||0)).forEach(doc=>{
+    const d=doc.data();const el=document.createElement("div");el.className="entry";
+    el.innerHTML=`<div class="top"><b></b>${pill(d.status)}</div><div class="note c"></div><div class="i"></div><div class="note r"></div><div class="ctrls"></div>`;
+    el.querySelector("b").textContent=d.name;el.querySelector(".c").textContent=(d.type==="texture"?"ألوان فقط · ١٠ ريال":"تصميم كامل · ١٥ ريال")+" · التواصل: "+d.contact+" · "+new Date(d.at||0).toLocaleDateString("ar");
+    el.querySelector(".i").textContent=d.idea;el.querySelector(".r").textContent=d.ref?("مرجع: "+d.ref):"";
+    Object.entries(STATUS).forEach(([k,[a]])=>{const b=document.createElement("button");b.className="btn";b.textContent=a;b.setAttribute("aria-pressed",String(d.status===k));
+      b.onclick=()=>db.doc("requests/"+doc.id).update({status:k}).catch(()=>{});el.querySelector(".ctrls").append(b);});
+    L.append(el);
+  });
+}
+(async()=>{
+  if(!window.claude)return;
+  try{[db,user]=await Promise.all([claude.use("db"),claude.use("user")]);}catch(e){return;}
+  if(user){try{myId=await user.id();owner=await user.isOwner();}catch(e){}}
+  if(db&&myId){db.doc("requests/"+myId).onSnapshot(renderMine,()=>{});}
+  if(db&&owner){$("#ownerPanel").hidden=false;db.collection("requests").onSnapshot(renderLedger,()=>{$("#ledger").innerHTML='<p class="note">ما قدرنا نقرأ الطلبات الحين.</p>';});}
+})();
+</script>
+
+</body>
+</html>
