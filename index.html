@@ -244,7 +244,8 @@ footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--line);color:v
 <script>
 const SKINS=[
   {id:"classic",file:"models/leon_orig.glb",tag:"الأصلي · ٢٠٠٥",name:"ليون الكلاسيك",by:"الشكل الأصلي من اللعبة",desc:"الجاكيت البني والقميص الأسود، كما ظهر ليون أول مرة في القرية.",meta:["الأصلي","بدون تعديل"],mine:false},
-  {id:"halloween",file:"models/leon_mod.glb",tag:"إصدار هالوين",name:"هالوين من RIZLL",by:'تم إنشاؤه بواسطة <strong class="en">RIZLL</strong>',desc:"قناع جمجمة، وأذنا أرنب سوداوان، وتيشيرت وبنطلون بهيكل عظمي، وذراع عظمية مجسّمة.",meta:["قناع جمجمة","ذراع عظمية","تسريحة المافيا"],mine:true}
+  {id:"halloween",file:"models/leon_mod.glb",tag:"إصدار هالوين",name:"هالوين من RIZLL",by:'تم إنشاؤه بواسطة <strong class="en">RIZLL</strong>',desc:"قناع جمجمة، وأذنا أرنب سوداوان، وتيشيرت وبنطلون بهيكل عظمي، وذراع عظمية مجسّمة.",meta:["قناع جمجمة","ذراع عظمية","تسريحة المافيا"],mine:true},
+  {id:"mafia",file:"models/leon_mafia.glb",tag:"طلب خاص · مافيا",name:"ليون المافيا",by:'<strong class="en">7SN M</strong><br>مشتري',desc:"قبعة فيدورا سوداء بشريط رمادي، قميص أبيض خافت بأكمام مطوية، سترة سوداء ثلاثية الأبعاد، بنطلون مخطط وحزام.",meta:["فيدورا","سترة 3D","بنطلون مخطط","حزام"],mine:true,buyer:"7SN M"}
 ];
 const $=s=>document.querySelector(s);
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -324,7 +325,7 @@ new ResizeObserver(resize).observe(canvas);resize();
 const grid=$("#skinGrid");
 SKINS.forEach(s=>{
   const b=document.createElement("button");b.className="card";b.dataset.id=s.id;b.type="button";
-  b.innerHTML=`<span class="tag">${s.mine?'من صنع <bdi class="en">RIZLL</bdi>':"الأصلي"}</span><h3></h3><p></p><div class="meta"></div>`;
+  b.innerHTML=`<span class="tag">${s.mine?'من صنع <bdi class="en">RIZLL</bdi>':"الأصلي"}</span><h3></h3>${s.buyer?'<div class="skin-by"><strong class="en">'+s.buyer+'</strong> · مشتري</div>':""}<p></p><div class="meta"></div>`;
   b.querySelector("h3").textContent=s.name;b.querySelector("p").textContent=s.desc;
   s.meta.forEach(m=>{const x=document.createElement("span");x.textContent=m;b.querySelector(".meta").append(x);});
   b.onclick=()=>{show(s.id);$("#stage").scrollIntoView({behavior:reduce?"auto":"smooth"});};
