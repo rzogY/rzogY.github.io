@@ -243,10 +243,12 @@ footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--line);color:v
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
 const SKINS=[
-  {id:"classic",file:"models/leon_orig.glb",tag:"الأصلي · ٢٠٠٥",name:"ليون الكلاسيك",by:"الشكل الأصلي من اللعبة",desc:"الجاكيت البني والقميص الأسود، كما ظهر ليون أول مرة في القرية.",meta:["الأصلي","بدون تعديل"],mine:false},
-  {id:"halloween",file:"models/leon_mod.glb",tag:"إصدار هالوين",name:"هالوين من RIZLL",by:'تم إنشاؤه بواسطة <strong class="en">RIZLL</strong>',desc:"قناع جمجمة، وأذنا أرنب سوداوان، وتيشيرت وبنطلون بهيكل عظمي، وذراع عظمية مجسّمة.",meta:["قناع جمجمة","ذراع عظمية","تسريحة المافيا"],mine:true},
-  {id:"mafia",file:"models/leon_mafia.glb",tag:"طلب خاص · مافيا",name:"ليون المافيا",by:'<strong class="en">7SN M</strong><br>مشتري',desc:"قبعة فيدورا سوداء بشريط رمادي، قميص أبيض خافت بأكمام مطوية، سترة سوداء ثلاثية الأبعاد، بنطلون مخطط وحزام.",meta:["فيدورا","سترة 3D","بنطلون مخطط","حزام"],mine:true,buyer:"7SN M"},
-  {id:"naw",file:"models/leon_naw.glb",tag:"طلب خاص · الأسود",name:"ليون الأسود",by:'<strong class="en">naw</strong><br>مشتري',desc:"قميص أسود ضيق بأكمام قصيرة، بنطلون غامق وحزام، وشعر ليون الأصلي.",meta:["قميص أسود","بنطلون غامق","حزام"],mine:true,buyer:"naw"}
+  {id:"classic",file:"models/leon_orig.glb",tag:"الأصلي · ٢٠٠٥",name:"ليون الكلاسيك",by:"الشكل الأصلي من اللعبة",desc:"",meta:[],mine:false},
+  {id:"halloween",file:"models/leon_mod.glb",tag:"إصدار هالوين",name:"هالوين من RIZLL",by:'تم إنشاؤه بواسطة <strong class="en">RIZLL</strong>',desc:"",meta:[],mine:true},
+  {id:"mafia",file:"models/leon_mafia.glb",tag:"طلب خاص",name:"ليون المافيا",by:'<strong class="en">7SN M</strong><br>مشتري',desc:"",meta:[],mine:true,buyer:"7SN M"},
+  {id:"naw",file:"models/leon_naw.glb",tag:"طلب خاص",name:"ليون الأسود",by:'<strong class="en">naw</strong><br>مشتري',desc:"",meta:[],mine:true,buyer:"naw"},
+  {id:"tre21",file:"models/leon_tre21.glb",tag:"طلب خاص",name:"ليون المافيا الأحمر",by:'<strong class="en">tre21</strong><br>مشتري',desc:"",meta:[],mine:true,buyer:"tre21"},
+  {id:"akh",file:"models/leon_akh.glb",tag:"طلب خاص",name:"ليون الأحمر",by:'<strong>أبو خلود</strong><br>مشتري',desc:"",meta:[],mine:true,buyer:"أبو خلود"}
 ];
 const $=s=>document.querySelector(s);
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -326,9 +328,8 @@ new ResizeObserver(resize).observe(canvas);resize();
 const grid=$("#skinGrid");
 SKINS.forEach(s=>{
   const b=document.createElement("button");b.className="card";b.dataset.id=s.id;b.type="button";
-  b.innerHTML=`<span class="tag">${s.mine?'من صنع <bdi class="en">RIZLL</bdi>':"الأصلي"}</span><h3></h3>${s.buyer?'<div class="skin-by"><strong class="en">'+s.buyer+'</strong> · مشتري</div>':""}<p></p><div class="meta"></div>`;
-  b.querySelector("h3").textContent=s.name;b.querySelector("p").textContent=s.desc;
-  s.meta.forEach(m=>{const x=document.createElement("span");x.textContent=m;b.querySelector(".meta").append(x);});
+  b.innerHTML=`<span class="tag">${s.mine?'من صنع <bdi class="en">RIZLL</bdi>':"الأصلي"}</span><h3></h3>${s.buyer?'<div class="skin-by"><strong class="en">'+s.buyer+'</strong> · مشتري</div>':""}`;
+  b.querySelector("h3").textContent=s.name;
   b.onclick=()=>{show(s.id);$("#stage").scrollIntoView({behavior:reduce?"auto":"smooth"});};
   grid.append(b);
 });
